@@ -25,7 +25,9 @@ const EditUser = ({ user }) => {
             }
         }
 
-        const placeHolder = async e => {
+        
+
+         const placeHolder = async e => {
             try {
                 const body = { username, password, email };
                 const response = await fetch(`http://localhost:4000/auth/${user.user_id}`, ) 
@@ -36,15 +38,15 @@ const EditUser = ({ user }) => {
             }
         }
 
-        
+
     console.log(user);
     return (
     <Fragment>
-       <button type="button" className="btn btn-warning btn" data-toggle="modal" data-target={`#id${user.user_id}`}  
+       <button type="button" className="btn btn-warning btn" data-toggle="modal" data-target={`#id${user.user_id}`} 
        >Edit
        </button>
 
-       <div className="modal fade" id={`id${user.user_id}`} role="dialog">
+            <div className="modal fade" id={`id${user.user_id}`} role="dialog">
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">
@@ -54,10 +56,10 @@ const EditUser = ({ user }) => {
                                 className="close" 
                                 data-dismiss="modal"
                                 onClick={e => placeHolder(e)}
-                            >&times;
+                                >&times; 
                             </button>
                     </div>
-                    <div className="modal-body">
+                        <div className="modal-body">
                             <input 
                                 type="text" 
                                 className="form-control" 
@@ -84,7 +86,7 @@ const EditUser = ({ user }) => {
                                     data-dismiss="modal"
                                     onClick={e => updateUser(e)}>
 
-                                        Edit
+                                        Save
 
                                 </button>
                                         
@@ -93,10 +95,9 @@ const EditUser = ({ user }) => {
                                     className="btn btn-danger" 
                                     data-dismiss="modal"
                                     onClick={e => placeHolder(e)}
-                                >
-                                      
+                                    >  
 
-                                        Close
+                                        Dismiss
 
                                 </button>
                             </div>

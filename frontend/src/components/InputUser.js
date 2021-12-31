@@ -32,20 +32,20 @@ const InputUser = () => {
                     <div className="form-column">
                         <div className="row">
                             <input 
-                                type="text" 
+                                type="text"  
                                 className="form-control" 
                                 placeholder="user" //from username
-                        //      required        
+                                required
                                 value={username}   //from username
                                 onChange={e => setUsername(e.target.value)}
                                 />
                         </div>
                         <div className="row">
                         <input 
-                                type="text" // changed from text/password
+                                type="text"  // changed from text/password
                                 id="pass"
                                 minLength="8" 
-                  //            required 
+                    //          required 
                                 className="form-control" 
                                 placeholder="password" 
                                 value={password}
@@ -56,7 +56,7 @@ const InputUser = () => {
                     </div>
             </form>
             </div>
-        </div>
+        </div>   
         </Fragment>
     )
 };
